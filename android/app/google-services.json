@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "708891269990",
+    "project_id": "meu-banco-9a7b2",
+    "storage_bucket": "meu-banco-9a7b2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:708891269990:android:2db919b9adaa5c6aa686a7",
+        "android_client_info": {
+          "package_name": "com.example.myapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkHlox-Ouqa_8eQKbMNwnl3sOjRbpvb9c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
