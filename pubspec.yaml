@@ -38,12 +38,11 @@ dependencies:
   firebase_core: ^3.13.1
   firebase_auth: ^5.5.4
   cloud_firestore: ^5.6.8
-  geolocator: ^11.0.0
+  geolocator: ^14.0.1
   google_maps_flutter: ^2.5.0
   google_maps_webservice: ^0.0.20-nullsafety.5
   http: ^0.13.4
-  firebase_storage: ^11.0.0
-  image_picker: ^1.0.0
+
 
 
 dev_dependencies:
