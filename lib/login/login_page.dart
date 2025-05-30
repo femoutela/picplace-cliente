@@ -33,6 +33,13 @@ class _LoginPageState extends State<LoginPage> {
     }
   }
 
+  OutlineInputBorder _roundedBorder(Color color) {
+    return OutlineInputBorder(
+      borderRadius: BorderRadius.circular(16),
+      borderSide: BorderSide(color: color),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,19 +48,57 @@ class _LoginPageState extends State<LoginPage> {
         backgroundColor: Colors.white,
         foregroundColor: Colors.black,
         title: const Text('Login'),
+        elevation: 0,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            TextField(controller: _emailController, decoration: const InputDecoration(labelText: 'Email')),
-            TextField(controller: _passwordController, obscureText: true, decoration: const InputDecoration(labelText: 'Senha')),
+            TextField(
+              controller: _emailController,
+              decoration: InputDecoration(
+                labelText: 'Email',
+                labelStyle: const TextStyle(color: Colors.black),
+                enabledBorder: _roundedBorder(Colors.grey),
+                focusedBorder: _roundedBorder(Colors.black),
+              ),
+              style: const TextStyle(color: Colors.black),
+            ),
+            const SizedBox(height: 12),
+            TextField(
+              controller: _passwordController,
+              obscureText: true,
+              decoration: InputDecoration(
+                labelText: 'Senha',
+                labelStyle: const TextStyle(color: Colors.black),
+                enabledBorder: _roundedBorder(Colors.grey),
+                focusedBorder: _roundedBorder(Colors.black),
+              ),
+              style: const TextStyle(color: Colors.black),
+            ),
             const SizedBox(height: 20),
-            ElevatedButton(onPressed: _login, child: const Text('Entrar')),
+            ElevatedButton(
+              onPressed: _login,
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.black,
+                foregroundColor: Colors.white,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(16),
+                ),
+              ),
+              child: const Text('Entrar'),
+            ),
             TextButton(
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (_) => const RegisterPage()));
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const RegisterPage()),
+                );
               },
+              style: TextButton.styleFrom(
+                foregroundColor: Colors.black,
+              ),
               child: const Text('Criar nova conta'),
             ),
           ],
